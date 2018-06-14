@@ -99,15 +99,32 @@ namespace RiMonitoring
                 DataRow row = dataManager.RetriveNowData("01");
                 if (row != null)
                 {
+                    //AlertPowerAC = (ObjFloat(row["power"]) < al.MinPowerAC || ObjFloat(row["power"]) > al.MaxPowerAC) ? true : false;
+                    //lbPowerAC.BackColor = (AlertPowerAC) ? BackColorAlarm : BackColorNormal;
+                    //lbPowerAC.ForeColor = (AlertPowerAC) ? ForeColorAlarm : ForeColorNormal;
+                    //lbPowerAC.Text = ObjString(row["power"]);
+
+                    //AlertCurrentAC = (ObjFloat(row["current"]) < al.MinCurrentAC || ObjFloat(row["current"]) > al.MaxCurrentAC) ? true : false;
+                    //lbCurrentAC.BackColor = (AlertCurrentAC) ? BackColorAlarm : BackColorNormal;
+                    //lbCurrentAC.ForeColor = (AlertCurrentAC) ? ForeColorAlarm : ForeColorNormal;
+                    //lbCurrentAC.Text = ObjString(row["current"]);
+
+                    AlertVoltAC = (ObjFloat(row["VG"]) < al.MinVoltAC || ObjFloat(row["VG"]) > al.MaxVoltAC) ? true : false;
+                    lbVG.BackColor = (AlertVoltAC) ? BackColorAlarm : BackColorNormal;
+                    lbVG.ForeColor = (AlertVoltAC) ? ForeColorAlarm : ForeColorNormal;
                     lbVG.Text = ObjString(row["VG"]);
+
+
                     lbIG.Text = ObjString(row["IG"]);
                     lbPG.Text = ObjString(row["PG"]);
                     lbFG.Text = ObjString(row["FG"]);
                     lbDWH.Text = ObjString(row["DWH"]);
                     lbTWH.Text = ObjString(row["TWH"]);
+
                     lbVIN1.Text = ObjString(row["VIN1"]);
                     lbIIN1.Text = ObjString(row["IIN1"]);
                     lbPIN1.Text = ObjString(row["PIN1"]);
+
                     lbVIN2.Text = ObjString(row["VIN2"]);
                     lbIIN2.Text = ObjString(row["IIN2"]);
                     lbPIN2.Text = ObjString(row["PIN2"]);
