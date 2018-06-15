@@ -114,7 +114,7 @@ namespace RiMonitoring
                     lbVG.ForeColor = (AlertVoltAC) ? ForeColorAlarm : ForeColorNormal;
                     lbVG.Text = ObjString(row["VG"]);
 
-
+                    //ฝฝ
                     lbIG.Text = ObjString(row["IG"]);
                     lbPG.Text = ObjString(row["PG"]);
                     lbFG.Text = ObjString(row["FG"]);
